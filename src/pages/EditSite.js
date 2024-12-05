@@ -290,9 +290,45 @@ const EditSite = () => {
               {widget.type === 'video' && <VideoWidget
                            widgetData
                                           content={{
-                                                   content: widget.properties.videoURL || '',
+                                                   content: widget.properties.content || '',
+                                                   linkUrl: widget.properties.linkUrl || '',
+                                                   clickAction: widget.properties.clickAction || '',
+                                                   videoFile:  widget.properties.videoFile || '',
+                                                   videoSource: widget.properties.videoSource || '',
+                                                   videoURL: widget.properties.videoURL || '',
+                                                   alignment: widget.properties.alignment || '',
+                                                   aspectRatio: widget.properties.aspectRatio || '',
+                                                   autoplay: widget.properties.autoplay || '',
+                                                   mute:  widget.properties.mute || '',
+                                                   loop: widget.properties.loop || '',
+                                                   controls: widget.properties.controls || '',
+                                                   privacyMode: widget.properties.privacyMode || '',
+                                                   cssFilter: widget.properties.cssFilter || '',
+                                                   margin    : widget.properties.margin || '',
+                                                   padding : widget.properties.padding || '',
+                                                   resolution : widget.properties.resolution || '',
+                                                   opacity : widget.properties.opacity || '',
+                                                   borderRadius : widget.properties.borderRadius || '',
+                                                   width : widget.properties.width || '',
+                                                   height : widget.properties.height || '',
+                                                   alignSelf : widget.properties.alignSelf || '',
+                                                   position : widget.properties.position || '',
+                                                   boxBoxShadow : widget.properties.boxBoxShadow || '',
+                                                   imageBoxShadow : widget.properties.imageBoxShadow || '',
+
+
+
+
+
+
+
+
+
 
                                    }}
+
+                                   canvasMode={canvasMode}
+
                                    onSave={(newProperties) =>
                                                             updateWidgetProperties(widget.id, newProperties)
                                            }
